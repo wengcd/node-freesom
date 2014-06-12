@@ -1,0 +1,114 @@
+doctype html
+html(lang="zh_CN")
+  head
+    meta(charset="UTF-8")
+    meta(name="vewport", content="width=device-width, initial-scale=1.0")
+    title= title
+    meta(name="description", content="鄞州自由神软件工程有限公司是一家新兴的公司")
+    meta(name="keywords", content="宁波, 鄞州, 软件工程, 宁波大学, 创业, 创新, 手游")
+    meta(name="author", content="翁超达")
+    link(rel="shortcut icon", href="http://38.media.tumblr.com/avatar_578fb6c9819c_128.png")
+    link(rel="apple-touch-icon-precomposed", href="http://38.media.tumblr.com/avatar_578fb6c9819c_128.png")
+    link(href='css/component.css', rel='stylesheet')
+    script(src="js/modernizr.custom.js")
+  body
+    .container
+      #bl-main.bl-main
+        section
+          .bl-box
+            h2.bl-icon.bl-icon-about 关于我们
+          .bl-content
+            img(src="images/logo.png",width="150")
+            h2 鄞州自由神工作室
+            p 鄞州自由神软件工程有限公司是一家由年轻团队组建的，以软件开发为目的工作室（公司）。
+            h2 What We Do
+            p 
+              em 手机端：
+              手机网游/手机App开发
+            p
+              em 网站开发：
+              中小型网站/企业门户/服务端开发
+            p
+              em 桌面软件：
+              桌面软件开发/游戏开发/教育类软件开发
+          span.bl-icon.bl-icon-close
+
+        section#bl-work-section
+          .bl-box
+            h2.bl-icon.bl-icon-works 作品集
+          .bl-content
+            h2 我们的作品
+            p 我们的作品涉及到手游开发、网站开发、App应用开发、教育软件开发能各类技术开发。
+            ul#bl-work-items
+              - projects.forEach(function(project, index){
+                li(data-panel="panel-#{index+1}")
+                  a(href="#")
+                    img(src="#{project.poster}")
+              - });
+            p Illustrations by
+              a(href="#") Freesom Inc.
+          span.bl-icon.bl-icon-close
+
+        section
+          .bl-box
+            h2.bl-icon.bl-icon-blog 博客
+          .bl-content
+            h2 
+              a(href="http://blog.yzfreesom.com") 博客
+            article
+              h3 关注我们的成长，分享我们的动态
+              p 你可以去我们的博客了解更多我们的发展和成长。
+                a(href="http://blog.yzfreesom.com") 嘿！点击这里
+          span.bl-icon.bl-icon-close
+
+        section
+          .bl-box
+            h2.bl-icon.bl-icon-contact 联系
+          .bl-content
+            h2 联系我们 Contact With us
+            dl.dl-horizontal
+              dt 名称
+              dd 鄞州自由神软件工程有限公司
+              dt 地址
+              dd 浙江省宁波市镇海区中官西路777号科技创业大厦1101
+              dt 电话
+              dd (0574)2887-8997
+              dt 邮件
+              dd
+                a(href="mailto:wengchaoda@gmail.com") wengchaoda@gmail.com
+              dt 微博
+              dd 
+                a(href="#") @自由神工作室
+            dl.dl-horizontal
+              dt Company
+              dd Yinzhou Freesom Software Engineering Co., Ltd.
+              dt Address
+              dd Room 1101, Keji Chuangye Dasha, No.777, Zhongguan Road, ZhenHai District Ningbo City Zhejiang Province
+              dt Telphone
+              dd (0574)2887-8997
+              dt Email
+              dd
+                a(href="mailto:wengchaoda@gmail.com") wengchaoda@gmail.com
+              dt Weibo
+              dd 
+                a(href="#") @自由神工作室
+
+        .bl-panel-items#bl-panel-work-items
+          - projects.forEach(function(project, index){
+            div(data-panel="panel-#{index+1}")
+              div
+                img(src="#{project.poster}")
+                h3= project.title
+                p= project.intro
+          - });
+          nav
+            span.bl-next-work &gt; Next Project
+            span.bl-icon.bl-icon-close
+
+
+    script(src="js/jquery.min.js")
+    script(src="js/boxlayout.js")
+    script.
+      $(function() {
+        Boxlayout.init();
+      });

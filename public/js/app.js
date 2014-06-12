@@ -1,0 +1,1 @@
+angular.module('freesom', ['ngResource', 'freesom.services', 'ngRoute', 'freesom.controllers']);

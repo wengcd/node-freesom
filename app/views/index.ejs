@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= title %></title>
+	<meta name="description" content="鄞州自由神软件工程有限公司是一家新兴的公司" />
+	<meta name="keywords" content="宁波, 鄞州, 软件工程, 宁波大学, 创业, 创新, 手游" />
+	<meta name="author" content="翁超达" />
+	<link rel="shortcut icon" href="http://38.media.tumblr.com/avatar_578fb6c9819c_128.png">
+	<link rel="apple-touch-icon-precomposed" href="http://38.media.tumblr.com/avatar_578fb6c9819c_128.png">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<!--    <div class="logo">
+	<img src="images/logo.png"></div>
+-->
+<div class="container">
+	<div id="bl-main" class="bl-main">
+		<section>
+			<div class="bl-box">
+				<h2 class="bl-icon bl-icon-about">关于我们</h2>
+			</div>
+			<div class="bl-content">
+				<header>
+					<img src="images/logo.png" width="150">
+					<h2>鄞州自由神工作室</h2>
+				</header>
+				<p>鄞州自由神软件工程有限公司是一家由年轻团队组建的，以软件开发为目的工作室（公司）。</p>
+				<h2>主要做的事：</h2>
+				<p><em>手机端：</em>手机网游/手机App开发</p>
+				<p><em>网站开发：</em>中小型网站/企业门户/服务端开发</p>
+				<p><em>桌面软件：</em>桌面软件开发/游戏开发/教育类软件开发</p>
+				<!-- <img src="http://placehold.it/640x480">
+				<img src="http://placehold.it/640x480">
+				<img src="http://placehold.it/640x480">
+				<img src="http://placehold.it/640x480">--></div>
+			<span class="bl-icon bl-icon-close"></span>
+		</section>
+		<section id="bl-work-section">
+			<div class="bl-box">
+				<h2 class="bl-icon bl-icon-works">作品集</h2>
+			</div>
+			<div class="bl-content">
+				<h2>我们的作品</h2>
+				<p>我们的作品涉及到手游开发、网站开发、App应用开发、教育软件开发能各类技术开发。</p>
+				<ul id="bl-work-items">
+					<% projects.forEach(function(project, index) { %>
+					<li data-panel="panel-<%= index+1 %>">
+						<a href="#">
+							<img src="<%= project.poster %>" />
+						</a>
+					</li>
+					<% }) %></ul>
+				<p>
+					Illustrations by
+					<a href="http://dribbble.com/isaac317/click">Isaac Montemayor</a>
+				</p>
+			</div>
+			<span class="bl-icon bl-icon-close"></span>
+		</section>
+		<section>
+			<div class="bl-box">
+				<h2 class="bl-icon bl-icon-blog">博客</h2>
+			</div>
+			<div class="bl-content">
+				<h2>
+					<a href="http://blog.yzfreesom.com">博客</a>
+				</h2>
+				<article>
+					<h3>关注我们的成长，分享我们的动态</h3>
+					<p>
+						你可以去我们的博客了解更多我们的发展和成长。
+						<a href="http://blog.yzfreesom.com">嘿！点击这里</a>
+					</p>
+				</article>
+
+			</div>
+			<span class="bl-icon bl-icon-close"></span>
+		</section>
+		<section>
+			<div class="bl-box">
+				<h2 class="bl-icon bl-icon-contact">联系</h2>
+			</div>
+			<div class="bl-content">
+				<h2>联系我们 Contact With us</h2>
+				<dl class="dl-horizontal">
+					<dt>名称</dt>
+					<dd>鄞州自由神软件工程有限公司</dd>
+					<dt>地址</dt>
+					<dd>浙江省宁波市镇海区中官西路777号科技创业大厦1101</dd>
+					<dt>电话</dt>
+					<dd>(0574)2887-8997</dd>
+					<dt>邮件</dt>
+					<dd>
+						<a href="mailto:wengchaoda@gmail.com">wengchaoda@gmail.com</a>
+					</dd>
+					<dt>微博</dt>
+					<dd>
+						<a href="#">@自由神工作室</a>
+					</dd>
+				</dl>
+				<dl class="dl-horizontal">
+					<dt>Company</dt>
+					<dd>Yinzhou Freesom Software Engineering Co., Ltd.</dd>
+					<dt>Address</dt>
+					<dd>
+						Room 1101, Keji Chuangye Dasha, No.777, Zhongguan Road, ZhenHai District Ningbo City Zhejiang Province
+					</dd>
+					<dt>Telphone</dt>
+					<dd>(0574)2887-8997</dd>
+					<dt>Email</dt>
+					<dd>
+						<a href="mailto:wengchaoda@gmail.com">wengchaoda@gmail.com</a>
+					</dd>
+					<dt>Weibo</dt>
+					<dd>
+						<a href="#">@自由神工作室</a>
+					</dd>
+				</dl>
+			</div>
+			<span class="bl-icon bl-icon-close"></span>
+		</section>
+		<!-- Panel items for the works -->
+		<div class="bl-panel-items" id="bl-panel-work-items">
+			<% projects.forEach(function(project, index) { %>
+			<div data-panel="panel-<%= index+1 %>">
+				<div>
+					<img src="<%= project.poster %>" />
+					<h3>
+						<%= project.title %>
+					</h3>
+					<p>
+						<%= project.intro %>
+					</p>
+				</div>
+			</div>
+			<% }) %>
+			<nav>
+				<span class="bl-next-work">&gt; Next Project</span>
+				<span class="bl-icon bl-icon-close"></span>
+			</nav>
+		</div>
+	</div>
+</div>
+<!-- /container -->
+<script src="js/jquery.min.js"></script>
+
+<script src="js/boxlayout.js"></script>
+<script>
+	  $(function() {
+		Boxlayout.init();
+	  });
+	</script>
+</body>
+</html>
